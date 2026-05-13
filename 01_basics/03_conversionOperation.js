@@ -34,6 +34,24 @@ console.log(convTostring);
 33 = "33"
 */
 
+/*  Some checks */
+console.log(null > 0);
+console.log(null == 0);
+console.log(null >= 0);
+
+/* The reason is that an equality check == and comparisons >, <, >=, <= works differently
+Comparisons converts null to a number , treating it as 0. That is why >= gives true and >
+returns false.
+SHOULD NOT USE IT NOT A GOOD PRACTICE
+*/
+
+/* Strict operator === it checks datatypes also here*/
+console.log("2" === 2); //returna false nut,
+console.log("2" == 2); // return true as it converts "2" to number
+
+
+
+
 
 
 
