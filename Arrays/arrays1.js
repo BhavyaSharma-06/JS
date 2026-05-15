@@ -23,15 +23,15 @@ console.log(newArr);
 console.log(typeof newArr);
 
 
-// SLICE AND SPLICE
+// // SLICE AND SPLICE
 
-// 1. SLICE
+// // 1. SLICE
 
 const sliceArr = arr.slice(0,2); // first element inclusive last exclusive
 console.log(sliceArr);
 console.log(arr);  // returns orignal array
 
-// 2. SPLICE
+// // 2. SPLICE
 
 const spliceArr = arr.splice(0,2); // first element inclusive last exclusive
 console.log(spliceArr);
@@ -50,6 +50,42 @@ array.splice(start, deleteCount, item1, item2...)
 
 const spliArr = arr.splice(1,3,17);
 console.log(arr);
+
+// More methods - PUSH(Changes orignal array)
+
+const names = [`Bhavi`, `Ansh`, `Bhavya`, `Aviral`];
+const names2 = [`Ananya`, `Jatin`, `Khyati`];
+
+names.push(names2);
+console.log(names);
+
+/* Notice the last item is another array inside it. This is called a nested array.
+Not recommended if you want to add elements
+
+CAN USE CONCAT OR MOST EFFECTIVE SPREAD OPERATOR */
+
+// CONCAT (Creates new array)
+
+const ans = names.concat(names2);
+console.log(ans);
+
+// SPREAD(Most EFFECTIVE can merge as many array as we want)
+
+const allNames = [...names, ...names2];
+console.log(allNames);
+
+//FLAT 
+/*The flat() method of Array instances creates a new array 
+with all sub-array elements concatenated into it recursively
+up to the specified depth.*/
+
+
+const arr2 = [1, 2, [3, 4, [5, 6]]];
+console.log(arr2.flat(Infinity));
+// As by default it does only one level
+
+
+
 
 
 
